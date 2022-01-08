@@ -4,7 +4,7 @@ from manim import *
 from manim.utils.unit import Pixels
 import numpy as np
 import sys
-sys.path.insert(0, "C:\manim\manim_ce\modules")
+sys.path.insert(0, "modules")
 import NAugxst as NAugxst
 import Python as Python
 
@@ -69,7 +69,6 @@ class Basic(MovingCameraScene):
         self.beforenewchapter()
         self.outro()
 
-    # TODO: Insert Python 101 at the first.
     def introduction(self):
         self.add_sound("assets/python101/Basic/audio/1.wav")
         self.wait(5)
@@ -197,7 +196,6 @@ class Basic(MovingCameraScene):
                           pycharm, vscode, atom, colab, replit))
         self.wait(1)
 
-    # TODO: Insert how to change file name.
     def colab(self):
         text = Text("Google Colab", font="Sarabun").scale(0.7)
         line = Line(LEFT*6.5, RIGHT*6.5)
@@ -278,8 +276,7 @@ class Basic(MovingCameraScene):
         self.wait(4)
         self.play(Uncreate(filename))
         self.wait(1)
-
-    # TODO: Insert how to write code and run code in cell.
+        
     def print_func1(self):
         raw_code1 = '''print("Hello, World!")'''
         code1 = Code(code=raw_code1, tab_width=4, background="window", language="Python", font="Monospace")
@@ -300,7 +297,6 @@ class Basic(MovingCameraScene):
         self.wait(7)
         self.wait(3)
 
-        # print("Hello, World!")
         self.play(Create(frame))
         self.wait(1)
         line = self.get_remark_rectangle(code1, 1)
@@ -320,7 +316,6 @@ class Basic(MovingCameraScene):
         self.wait(8)
         self.play(FadeOut(code1, frame, line, output1))
 
-    # TODO: Insert how to create new cell.
     def print_func2(self):
         raw_code2 = '''print("8-2")
 print(8-2)
@@ -344,7 +339,6 @@ print(8-2)
         self.wait(9)
         self.wait(3)
 
-        # print("8-2")
         self.play(Create(frame))
         self.wait(1)
         line = self.get_remark_rectangle(code2, 1)
@@ -363,7 +357,6 @@ print(8-2)
         self.play(Create(output1))
         self.wait(1)
 
-        # print(8-2)
         self.change_line(code2, line, 2)
         self.wait(10)
         output2 = Tex("6")
@@ -402,7 +395,6 @@ print(language)
         self.add_sound("assets/python101/Basic/audio/code_work.wav")
         self.wait(3)
 
-        # language = "Python"
         self.play(Create(frame))
         self.wait(1)
         line = self.get_remark_rectangle(code3, 1)
@@ -422,7 +414,6 @@ print(language)
         self.play(Create(output1))
         self.wait(1)
 
-        # print(language)
         self.change_line(code3, line, 2)
         self.add_sound("assets/python101/Basic/audio/40.wav")
         self.wait(7)
@@ -465,7 +456,6 @@ print(number)
         self.add_sound("assets/python101/Basic/audio/code_work.wav")
         self.wait(3)
 
-        # number = 12
         self.play(Create(frame))
         self.wait(1)
         line = self.get_remark_rectangle(code4, 1)
@@ -485,7 +475,6 @@ print(number)
         self.play(Create(output1))
         self.wait(1)
 
-        # print(number)
         self.change_line(code4, line, 2)
         self.add_sound("assets/python101/Basic/audio/44.wav")
         self.wait(7)
@@ -530,7 +519,6 @@ print(book)
         self.add_sound("assets/python101/Basic/audio/code_work.wav")
         self.wait(3)
 
-        # book = input("Enter your book name: ")
         self.play(Create(frame))
         self.wait(1)
         line = self.get_remark_rectangle(code5, 1)
@@ -562,7 +550,6 @@ print(book)
         self.play(Create(output1))
         self.wait(2)
 
-        # print(book)
         self.change_line(code5, line, 2)
         self.add_sound("assets/python101/Basic/audio/51.wav")
         self.wait(6)
@@ -576,8 +563,7 @@ print(book)
 
         self.play(FadeOut(code5, frame, line, ask1, output1, output2))
         self.wait(1)
-
-    # TODO: Changes time duration.
+        
     def beforenewchapter(self):
         raw_code1 = '''a = 5
 b = -4
