@@ -70,14 +70,12 @@ class Basic(MovingCameraScene):
         self.outro()
 
     def introduction(self):
-        self.add_sound("assets/python101/Basic/audio/1.wav")
         self.wait(5)
 
         text_q1 = Text("เครื่องมือพัฒนาโปรแกรม", font="Sarabun").scale(0.7)
         text_q1.move_to([0, 1, 0])
         rect_q1 = Rectangle(height=text_q1.height+0.4, width=text_q1.width+0.4).move_to(text_q1)
         q1 = Group(text_q1, rect_q1).set_color(WHITE)
-        self.add_sound("assets/python101/Basic/audio/2.wav")
         self.play(FadeIn(q1))
         self.wait(4)
 
@@ -85,7 +83,6 @@ class Basic(MovingCameraScene):
         text_q2.move_to([0, -1, 0])
         rect_q2 = Rectangle(height=text_q2.height+0.4, width=text_q2.width+0.4).move_to(text_q2)
         q2 = Group(text_q2, rect_q2).set_color(WHITE)
-        self.add_sound("assets/python101/Basic/audio/3.wav")
         self.play(FadeIn(q2))
         self.wait(3)
 
